@@ -1,97 +1,91 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Tugas WebView – MIT App Inventor
 
-# Getting Started
+Aplikasi Android sederhana yang dibuat dengan **MIT App Inventor** menggunakan komponen **WebView**. Saat dibuka, aplikasi langsung menampilkan sebuah website di dalam aplikasi tanpa berpindah ke browser.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Identitas
 
-## Step 1: Start Metro
+| | |
+|---|---|
+| **Nama** | Mochammad Gibran K.R |
+| **NPM** | 41155050240024 |
+| **Program Studi** | Teknik Informatika |
+| **Universitas** | Universitas Langlangbuana (UNLA) |
+| **Mata Kuliah** | Pemograman Mobile |
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Deskripsi
 
-```sh
-# Using npm
-npm start
+Proyek ini adalah tugas untuk mempelajari komponen **WebView** pada MIT App Inventor. WebView memungkinkan aplikasi memuat dan menampilkan halaman web langsung di dalam layar aplikasi. Aplikasi ini memuat website: **https://www.unla.ac.id/**.
 
-# OR using Yarn
-yarn start
+## Fitur
+
+- Memuat website otomatis saat aplikasi dibuka (`Screen1.Initialize`)
+- Menampilkan halaman web di dalam aplikasi menggunakan komponen WebView
+- [tambahkan fitur lain, mis. tombol Kembali, Refresh, atau Beranda]
+
+## Teknologi
+
+- [MIT App Inventor](https://appinventor.mit.edu/)
+- Komponen **WebView** (properti `HomeUrl` / blok `GoToUrl`)
+- Android
+
+## Komponen yang Digunakan
+
+| Komponen | Fungsi |
+|---|---|
+| `Screen1` | Layar utama aplikasi |
+| `WebViewer1` | Menampilkan halaman website |
+| [komponen lain] | [fungsi] |
+
+## Blok Program
+
+Alur logika utama aplikasi:
+
+```
+when Screen1.Initialize
+do  call WebViewer1.GoToUrl
+        url  "https://contoh-website.com"
 ```
 
-## Step 2: Build and run your app
+> Sesuaikan URL di atas dengan website yang dipakai pada proyek.
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## Cara Menjalankan
 
-### Android
+### Opsi 1 – Impor file proyek (.aia)
 
-```sh
-# Using npm
-npm run android
+1. Buka [MIT App Inventor](https://ai2.appinventor.mit.edu/) dan login dengan akun Google.
+2. Pilih **Projects → Import project (.aia) from my computer**.
+3. Pilih file `.aia` dari repositori ini.
+4. Jalankan lewat **Connect → AI Companion** (scan QR code dengan aplikasi MIT AI2 Companion) atau **Build → Android App (.apk)**.
 
-# OR using Yarn
-yarn android
+### Opsi 2 – Instal APK
+
+1. Unduh file `.apk` dari repositori ini.
+2. Izinkan instalasi dari sumber tidak dikenal di perangkat Android.
+3. Buka file APK dan instal.
+
+## Struktur Repositori
+
+```
+Tugas_Web_View_Fabric/
+├── README.md
+├── [nama-proyek].aia      # File proyek MIT App Inventor
+├── [nama-proyek].apk      # Aplikasi siap instal
+└── screenshots/           # Tangkapan layar aplikasi
 ```
 
-### iOS
+## Tangkapan Layar
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+| Tampilan Awal | Tampilan Website |
+|---|---|
+| !<img width="575" height="1280" alt="WhatsApp Image 2026-11-16 at 09 43 20" src="https://github.com/user-attachments/assets/41cb0354-f740-4af0-9423-3ecbba483ffb" />) | !<img width="576" height="1280" alt="WhatsApp Image 2026-11-16 at 10 07 55" src="https://github.com/user-attachments/assets/10939368-aa9f-4359-9e39-ac6c038f2ab8" /> |
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## Catatan
 
-```sh
-bundle install
-```
+- Perangkat harus terhubung ke internet agar website dapat dimuat.
+- Beberapa website membatasi tampilan di dalam WebView.
 
-Then, and every time you update your native dependencies, run:
+## Pembuat
 
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Mochammad Gibran K.R** – Teknik Informatika, Universitas Langlangbuana
+GitHub: [GibranDev08](https://github.com/GibranDev08)
